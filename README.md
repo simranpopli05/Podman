@@ -3,7 +3,7 @@
 # Table of Contents
 
 1. [Podman](#Podman)
-    - [Installation on Ubuntu](#installation-on-ubuntu)
+    - [Installation on Ubuntu](#Installation-on-Ubuntu)
     - [Containers](#containers)
         - [Key Characteristics of Containers](#key-characteristics-of-containers)
     - [Podman Python Library](#podman-python-library)
@@ -32,7 +32,7 @@
 
 **Podman is a daemonless, open-source, Linux native tool designed to make it easy to find, run, build, share, and deploy applications using Open Containers Initiative Container and Container images. Podman manages the entire container ecosystem which includes pods, containers, container images, and container volumes using the libpod library.**
 
-**Installation on Ubuntu**
+# Installation on Ubuntu
 
 **To install Podman on Ubuntu, run the following commands:**
 
