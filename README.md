@@ -4,12 +4,12 @@
 
 1. [Podman](#Podman)
     - [Installation on Ubuntu](#Installation-on-Ubuntu)
-    - [Containers](#containers)
-        - [Key Characteristics of Containers](#key-characteristics-of-containers)
-    - [Podman Python Library](#podman-python-library)
+    - [Containers](#Containers)
+        - [Key Characteristics of Containers](#Key-characteristics-of-virtual-machines)
+    - [Podman Python Library](#Podman-Python-Library)
         - [Example Python Script](#example-python-script)
-    - [What is a Pod?](#what-is-a-pod)
-    - [Advantages of Podman](#advantages-of-podman)
+    - [What is a Pod?](#what-is-a-pod?)
+    - [Advantages of Podman](#Advantages-of-Podman)
     - [Podman Architecture](#podman-architecture)
     - [Docker vs Podman](#docker-vs-podman)
 2. [Docker](#docker)
@@ -47,7 +47,7 @@ sudo apt -y install podman podman --version
 ![image](https://github.com/simranpopli05/Podman/assets/153719945/ccb67b43-4865-46e5-b128-d59af4f769f4)
 
 
-Containers
+# Containers
 
   A container is a lightweight, portable, and self-sufficient unit that can run applications and their dependencies. Containers package the application code, runtime, libraries, and other necessary components into a single unit. They run on a shared operating system kernel and isolate the application processes from each other and from the host system. Popular containerization platforms include Docker and container orchestration tools like Kubernetes.
     
@@ -84,12 +84,13 @@ Key characteristics of virtual machines
 ![image](https://github.com/simranpopli05/Podman/assets/153719945/8489196e-53e4-424f-adc6-2ae9a827b1e4)
 
 
-**Podman Python Library**
+# Podman Python Library
 
 **The Podman Python library provides a convenient way to interact with the Podman service using Python.**
 
 **PodmanPy is a Python3 module that allows you to write Python scripts that access resources maintained by a Podman service. It leverages the Podman service RESTful API.**
 
+# example python script
 **Here's an example of a Python script that creates a container using the podman library:**
 ```
 python
@@ -103,7 +104,7 @@ Remove the container container.remove()
   ```
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/a7525003-d3a8-47b1-83dd-b55e636fd6ea)
 
-  **What is a pod?**
+  # What is a pod?
 
   **A pod in Podman is a group of containers that share the same network namespace, which means they can communicate with each other using localhost. Pods can also share storage and other resources.**
 
@@ -114,7 +115,7 @@ Remove the container container.remove()
   ``` 
 ![image](https://github.com/simranpopli05/Podman/assets/153719945/80f11105-46b4-4ef5-9f94-f2e2c35ca698)
 
-  **Advantages of Podman**
+  # Advantages of Podman
 
 - **Daemonless Architecture: Podman operates without a central daemon, reducing the attack surface and potentially enhancing security.**
 - **Rootless Containers: Podman allows for rootless container execution, providing an added layer of security by isolating containers from the root user.**
