@@ -3,21 +3,17 @@
 # Table of Contents
 
 1. [Podman](#Podman)
-    - [Installation on Ubuntu](#Installation-on-Ubuntu)
-    - [Containers](#Containers)
-        - [Key Characteristics of Containers](#Key-characteristics-of-virtual-machines)
-    - [Podman Python Library](#Podman-Python-Library)
-        - [Example Python Script](#example-python-script)
-    - [What is a Pod?](#what-is-a-pod?)
-    - [Advantages of Podman](#Advantages-of-Podman)
-    - [Podman Architecture](#podman-architecture)
-    - [Docker vs Podman](#docker-vs-podman)
-2. [Docker](#docker)
-    - [Daemonless Operation](#daemonless-operation)
-    - [Rootless Containers](#rootless-containers)
-    - [Docker Compatibility](#docker-compatibility)
-    - [Pod Concept](#pod-concept)
-3. [References](#references)
+2. [Installation on Ubuntu](#Installation-on-Ubuntu)
+3. [Containers](#Containers)
+4. [Key Characteristics of Containers](#Key-characteristics-of-virtual-machines)
+5. [Podman Python Library](#Podman-Python-Library)
+6. [Example Python Script](#example-python-script)
+7. [What is a Pod?](#what-is-a-pod?)
+8. [Advantages of Podman](#Advantages-of-Podman)
+9. [Podman Architecture](#Podman-Architecture)
+10. [Docker vs Podman](#Docker-vs-Podman)
+11. [Docker](#Docker)
+12.  [References](#references)
 
 
 
@@ -123,7 +119,7 @@ Remove the container container.remove()
 - **User-Friendly Commands: Podman commands are designed to mimic Docker commands, making it easy for users familiar with Docker to transition to Podman.**
 - **No Root Privileges Required: Podman allows users to perform container operations without requiring root privileges, promoting a more secure and user-friendly experience.**
 
-**Podman Architecture**
+# Podman Architecture
 
 - **Daemonless Design: Podman operates without a central daemon. Instead, it manages containers and pods directly without the need for a background service.**
 - **Container Management: Each Podman command directly interacts with the container or pod without intermediaries. This makes Podman more lightweight and avoids potential security concerns associated with a daemon.**
@@ -132,7 +128,7 @@ Remove the container container.remove()
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/a372e291-c1b3-486e-be41-d52f5e695573)
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/dd7a2931-7bf4-4ce0-8354-2b5546d586b9)
 
-Docker vs Podman
+# Docker vs Podman
 
 Podman
 
@@ -152,7 +148,7 @@ Podman
    
    Podman introduces the concept of pods, which are groups of containers that share the same network namespace.
 
-Docker
+# Docker
 
    Central Daemon
     
