@@ -1,3 +1,28 @@
+# PODMAN VS DOCKER 
+
+# Table of Contents
+
+1. [Podman](#Podman)
+    - [Installation on Ubuntu](#installation-on-ubuntu)
+    - [Containers](#containers)
+        - [Key Characteristics of Containers](#key-characteristics-of-containers)
+    - [Podman Python Library](#podman-python-library)
+        - [Example Python Script](#example-python-script)
+    - [What is a Pod?](#what-is-a-pod)
+    - [Advantages of Podman](#advantages-of-podman)
+    - [Podman Architecture](#podman-architecture)
+    - [Docker vs Podman](#docker-vs-podman)
+2. [Docker](#docker)
+    - [Daemonless Operation](#daemonless-operation)
+    - [Rootless Containers](#rootless-containers)
+    - [Docker Compatibility](#docker-compatibility)
+    - [Pod Concept](#pod-concept)
+3. [References](#references)
+
+
+
+
+
 # Podman
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/d5bb191a-90f0-453b-be35-143bf5205a87)
 
@@ -11,42 +36,53 @@
 
 **To install Podman on Ubuntu, run the following commands:**
 
-
-
 ```
 sudo apt update
 ```
+![image](https://github.com/simranpopli05/Podman/assets/153719945/312153e3-0e8e-422a-8a25-3b7b420695bd)
 
 ```
 sudo apt -y install podman podman --version
 ```
-
-**Checkpointing**
-
-**Checkpointing is a feature that allows you to save the state of a running container, including all its processes and memory, and later restore it. The command to checkpoint a container in Podman is:**
+![image](https://github.com/simranpopli05/Podman/assets/153719945/ccb67b43-4865-46e5-b128-d59af4f769f4)
 
 
+Containers
 
-```
-podman container checkpoint [options] container [container ...]
-```
+  A container is a lightweight, portable, and self-sufficient unit that can run applications and their dependencies. Containers package the application code, runtime, libraries, and other necessary components into a single unit. They run on a shared operating system kernel and isolate the application processes from each other and from the host system. Popular containerization platforms include Docker and container orchestration tools like Kubernetes.
+    
 
-**For example, to checkpoint a container with zstd compression, you would use:**
+Key characteristics of containers
+
+   Lightweight
+   
+  Containers share the host operating system's kernel, making them more lightweight and efficient in terms of resource usage compared to virtual machines.
+
+   Portability 
+        
+   Containers encapsulate everything an application needs to run, making them highly portable across different environments.
+
+   Speed 
+      
+   Containers can start up and shut down quickly, making them well-suited for dynamic and scalable applications.
+
+   Virtual Machines (VMs)
+
+   A virtual machine, on the other hand, emulates a complete operating system along with its kernel and runs on virtualized hardware. Each VM includes a full operating system, and a hypervisor (virtual machine monitor) manages the allocation of physical resources to each VM.
+
+Key characteristics of virtual machines
+
+   Isolation
+
+   VMs provide strong isolation since each VM runs its own operating system and has its own kernel. This isolation is beneficial for security and compatibility but comes with a higher overhead.
+
+   Resource Intensive 
+   
+   VMs require more resources (memory, storage, etc.) because they include a complete operating system stack.
 
 
-```
-Podman container checkpoint -c zstd mycontainer
-```
+![image](https://github.com/simranpopli05/Podman/assets/153719945/8489196e-53e4-424f-adc6-2ae9a827b1e4)
 
-**Restoring the container**
-
-**Restoring a container is only possible from a previously checkpointed container. The restored container will continue to run at exactly the same point in time it was checkpointed.**
-
-
-
-```
-sudo podman container restore <container\_id>
-```
 
 **Podman Python Library**
 
@@ -76,6 +112,7 @@ Remove the container container.remove()
   ```
   podman pod create --name mypod -p 5173:5173 -p 3000:3000 -p 3306:3306
   ``` 
+![image](https://github.com/simranpopli05/Podman/assets/153719945/80f11105-46b4-4ef5-9f94-f2e2c35ca698)
 
   **Advantages of Podman**
 
@@ -94,4 +131,50 @@ Remove the container container.remove()
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/a372e291-c1b3-486e-be41-d52f5e695573)
 ![image](https://github.com/simranpopli05/Podman-Podman-vs-Docker-/assets/153719945/dd7a2931-7bf4-4ce0-8354-2b5546d586b9)
 
+Docker vs Podman
 
+Podman
+
+   Daemonless Operation
+    
+   Podman operates without a central daemon, managing containers as individual user processes. This can enhance security and simplifies the user experience.
+
+  Rootless Containers
+      
+  Podman supports running containers without requiring root (administrator) privileges, contributing to improved security.
+
+   Docker Compatibility
+   
+   Podman is designed to be compatible with Docker commands, making it accessible to users familiar with Docker.
+
+   Pod Concept
+   
+   Podman introduces the concept of pods, which are groups of containers that share the same network namespace.
+
+Docker
+
+   Central Daemon
+    
+   Docker relies on a central daemon process to manage containers. This daemon handles tasks like resource allocation, networking, and container lifecycle management.
+
+   Root Privileges 
+    
+  Running Docker typically requires root privileges, though there are ways to run it with limited privileges.
+
+   Extensive Ecosystem 
+    
+  Docker has a large and established ecosystem, including Docker Hub for sharing and accessing container images. It's widely used and supported.
+
+   Docker Compose 
+    
+   Docker includes Docker Compose, a tool for defining and running multi-container applications.
+
+   Community 
+    
+   Docker has a large community and extensive documentation, making it easy to find help and resources.
+
+Refrence link 
+https://www.google.com/search?channel=fs&client=ubuntu-sn&q=podman+documentation
+https://testsigma.com/blog/podman-vs-docker/
+
+  Thankyou                                 
