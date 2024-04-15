@@ -8,7 +8,7 @@
 4. [Key Characteristics of Containers](#Key-characteristics-of-virtual-machines)
 5. [Podman Python Library](#Podman-Python-Library)
 6. [Example Python Script](#example-python-script)
-7. [What is a Pod?](#what-is-a-pod?)
+7. [What is a Pod?](#What-is-a-pod?)
 8. [Advantages of Podman](#Advantages-of-Podman)
 9. [Podman Architecture](#Podman-Architecture)
 10. [Docker vs Podman](#Docker-vs-Podman)
@@ -170,8 +170,9 @@ Podman
     
    Docker has a large community and extensive documentation, making it easy to find help and resources.
 
-Refrence link 
-https://www.google.com/search?channel=fs&client=ubuntu-sn&q=podman+documentation
-https://testsigma.com/blog/podman-vs-docker/
+Refrences
+
+- https://www.google.com/search?channel=fs&client=ubuntu-sn&q=podman+documentation
+- https://testsigma.com/blog/podman-vs-docker/
 
   Thankyou                                 
